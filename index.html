@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pawan ❤️ Valentine</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffd6e8, #fff1f7);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      max-width: 320px;
+      position: relative;
+    }
+    h1 {
+      color: #e91e63;
+    }
+    .buttons {
+      margin-top: 20px;
+      position: relative;
+      height: 60px;
+    }
+    button {
+      padding: 12px 22px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    #yesBtn {
+      background: #e91e63;
+      color: white;
+    }
+    #noBtn {
+      background: #ccc;
+      color: #333;
+      position: absolute;
+      left: 140px;
+    }
+    p {
+      margin-top: 15px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>❤️ Pawan ❤️</h1>
+    <h2>Will you be my Valentine?</h2>
+
+    <div class="buttons">
+      <button id="yesBtn" onclick="yesClicked()">Yes 💖</button>
+      <button id="noBtn" onmouseover="moveNo()">No 🙈</button>
+    </div>
+
+    <p id="msg"></p>
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.getElementById("msg").innerText =
+        "Yay! This just made my day ✨💖";
+    }
+
+    function moveNo() {
+      const btn = document.getElementById("noBtn");
+      const x = Math.floor(Math.random() * 120);
+      const y = Math.floor(Math.random() * 30);
+      btn.style.left = x + "px";
+      btn.style.top = y + "px";
+    }
+  </script>
+</body>
+        </html>
